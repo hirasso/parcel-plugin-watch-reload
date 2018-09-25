@@ -7,10 +7,9 @@
   "scripts": {
     "test": "mocha --timeout 500000"
   },
-  "dependencies": {
-    "glob-watcher": "^5.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "chokidar": "^2.0.4",
     "fs-extra": "^7.0.0",
     "mocha": "^5.2.0",
     "parcel-assert-bundle-tree": "^1.0.0",
