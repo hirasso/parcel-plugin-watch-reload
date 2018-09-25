@@ -1,0 +1,21 @@
+{
+  "name": "parcel-plugin-watch-reload",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/hirasso/parcel-plugin-watch-reload.git",
+  "scripts": {
+    "test": "mocha --timeout 500000"
+  },
+  "dependencies": {
+    "glob-watcher": "^5.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "parcel-assert-bundle-tree": "^1.0.0",
+    "parcel-bundler": "^1.9.7"
+  },
+  "peerDependencies": {
+    "parcel-bundler": "^1.9.7"
+  }
+}
