@@ -1,4 +1,4 @@
-# parcel-plugin-modernizr [![Build Status](https://travis-ci.com/hirasso/parcel-plugin-watch-reload.svg?branch=master)](https://travis-ci.com/hirasso/parcel-watch-reload)
+# parcel-plugin-modernizr [![Build Status](https://travis-ci.com/hirasso/parcel-plugin-watch-reload.svg?branch=master)](https://travis-ci.com/hirasso/parcel-plugin-watch-reload)
 
 **Please note: This plugin is still in early development.**
 
