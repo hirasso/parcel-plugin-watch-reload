@@ -5,7 +5,7 @@ const WatchReload = require('../lib/watch-reload');
 
 describe('Basic', function() {
   it('Should trigger a browser reload on file change', function(done) {
-    this.timeout( 3000 );
+    this.timeout( 5000 );
     
     deleteTesterFile(); 
 
