@@ -1,6 +1,6 @@
 const Bundler = require('parcel-bundler');
 const path = require('path');
-const Plugin = require('../index');
+const WatchReload = require('../lib/watch-reload');
 
 async function setupBundler(input, options) {
   const bundler = new Bundler(input, Object.assign({
@@ -10,7 +10,8 @@ async function setupBundler(input, options) {
     logLevel: 0,
     publicUrl: './'
   }, options));
-  await Plugin(bundler);
+  const watchReload = new WatchReload( bundler );
+  bundler.watchReload = watchReload;
   return bundler;
 }
 
