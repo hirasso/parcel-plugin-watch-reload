@@ -6,27 +6,28 @@ const WatchReload = require('../lib/watch-reload');
 describe('Basic', function() {
   it('Should trigger a browser reload on file change', function(done) {
     this.timeout( 3000 );
-    // const watchReload = new WatchReload();
+    
+    deleteTesterFile(); 
 
-    deleteTesterFile();    
+    const watchReload = new WatchReload();
+
+    watchReload.on( 'reloadBrowsers', () => {
+
+      watchReload.stopWatcher();
+      deleteTesterFile();
+      done();
+      
+    })
 
     setTimeout(() => {
-      done();
-    }, 300);
-    // watchReload.on( 'reloadBrowsers', () => {
-
-    //   watchReload.stopWatcher();
-    //   deleteTesterFile();
-    //   done();
-      
-    // })
-
-    // fs.writeFileSync(path.join(__dirname, './tester.php'));
+      fs.writeFileSync(path.join(__dirname, './tester.php'));
+    }, 500);
   });
 });
 
 function deleteTesterFile() {
-  try {
-    fs.unlinkSync(path.join(__dirname, './tester.php'));
-  } catch(e){};
+  let file = path.join(__dirname, './tester.php');
+  if( fs.existsSync(file) ) {
+    fs.unlinkSync( file );
+  }
 }
