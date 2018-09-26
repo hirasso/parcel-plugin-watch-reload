@@ -1,11 +1,11 @@
 {
   "name": "parcel-plugin-watch-reload",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/hirasso/parcel-plugin-watch-reload.git",
   "scripts": {
-    "test": "NODE_ENV=test mocha --timeout 500000"
+    "test": "NODE_ENV=test mocha"
   },
   "dependencies": {
     "chalk": "^2.4.1",
