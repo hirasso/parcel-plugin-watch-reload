@@ -7,6 +7,9 @@
   "scripts": {
     "test": "NODE_ENV=test mocha"
   },
+  "watchreload": {
+    "files": "**/*.php"
+  },
   "dependencies": {
     "chalk": "^2.4.1",
     "chokidar": "^2.0.4",
