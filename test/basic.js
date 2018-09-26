@@ -13,15 +13,16 @@ describe('Basic', function() {
 
     watchReload.on( 'reloadBrowsers', () => {
 
-      watchReload.stopWatcher();
+      watchReload.watcher.close();
       deleteTesterFile();
       done();
       
     })
 
-    setTimeout(() => {
+    watchReload.watcher.on('ready', () => {
       fs.writeFileSync(path.join(__dirname, './tester.php'));
-    }, 500);
+    })
+
   });
 });
 
