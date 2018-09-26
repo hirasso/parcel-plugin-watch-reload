@@ -7,10 +7,12 @@
   "scripts": {
     "test": "mocha --timeout 500000"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
+    "chalk": "^2.4.1",
     "chokidar": "^2.0.4",
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^7.0.0"
+  },
+  "devDependencies": {
     "mocha": "^5.2.0",
     "parcel-assert-bundle-tree": "^1.0.0",
     "parcel-bundler": "^1.9.7"
