@@ -1,26 +1,29 @@
 const assert = require('assert');
 const path = require('path');
 const fs = require('fs-extra');
-
 const WatchReload = require('../lib/watch-reload');
 
-fs.emptyDirSync( path.join(__dirname, './dist') )
+describe('Basic', function() {
+  it('Should trigger a browser reload on file change', function(done) {
+    this.timeout( 3000 );
+    const watchReload = new WatchReload( false );
 
-function test() {
-  describe('Basic', function() {
-    it('Should trigger a browser reload on file change', function(done) {
-      this.timeout( 5000 );
-      const watchReload = new WatchReload( false );
+    deleteTesterFile();    
+
+    watchReload.on( 'reloadBrowsers', () => {
+
+      watchReload.stopWatcher();
+      deleteTesterFile();
+      done();
       
-      watchReload.on( 'reloadBrowsers', () => {
-        watchReload.stopWatcher();
-        fs.unlinkSync(path.join(__dirname, './Integration/Basic/tester.php'));
-        done();
-      })
+    })
 
-      fs.writeFileSync(path.join(__dirname, './Integration/Basic/tester.php'));
-    });
+    fs.writeFileSync(path.join(__dirname, './tester.php'));
   });
-}
+});
 
-test();
+function deleteTesterFile() {
+  try {
+    fs.unlinkSync(path.join(__dirname, './tester.php'));
+  } catch(e){};
+}
