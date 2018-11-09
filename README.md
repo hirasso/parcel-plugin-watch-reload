@@ -1,4 +1,4 @@
-# parcel-plugin-modernizr [![Build Status](https://travis-ci.com/hirasso/parcel-plugin-watch-reload.svg?branch=master)](https://travis-ci.com/hirasso/parcel-plugin-watch-reload)
+# parcel-plugin-watch-reload [![Build Status](https://travis-ci.com/hirasso/parcel-plugin-watch-reload.svg?branch=master)](https://travis-ci.com/hirasso/parcel-plugin-watch-reload)
 
 📦🔌🗂👀 A [Parcel](https://github.com/parcel-bundler/parcel) plugin that watches files not included in your bundles (e.g. `**/*.php`) and reloads your browser if they change. Also, has emojis in readme 👾
 
