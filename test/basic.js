@@ -3,15 +3,17 @@ const path = require('path');
 const fs = require('fs-extra');
 const WatchReload = require('../lib/watch-reload');
 
+const Bundler = require('parcel-bundler');
+
 describe('Basic', function() {
   it('Should trigger a browser reload on file change', function(done) {
     this.timeout( 5000 );
     
-    deleteTesterFile(); 
+    deleteTesterFile();
 
     const watchReload = new WatchReload();
 
-    watchReload.on( 'reloadBrowsers', () => {
+    watchReload.on( 'fileChangeDetected', () => {
 
       watchReload.watcher.close();
       deleteTesterFile();
