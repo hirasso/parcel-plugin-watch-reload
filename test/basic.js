@@ -7,7 +7,7 @@ const Bundler = require('parcel-bundler');
 
 describe('Basic', function() {
   it('Should trigger a browser reload on file change', function(done) {
-    this.timeout( 5000 );
+    this.timeout( 10000 );
     
     deleteTesterFile();
 

@@ -34,5 +34,19 @@ Arrays of globs are also supported:
   }
 }
 ```
+Without the `files` setting in your `package.json`, the plugin will do nothing.
 
-That's it! If you start parcel in watch mode, each change to a file matching your rules will trigger a browser reload. ✨
+## Optional settings
+
+You can set a delay for the browser reload like this:
+
+```json
+{
+  "watchreload": {
+    "files": "**/*.php",
+    "reloadDelay": 200
+  }
+}
+```
+
+That's it! If you start parcel in `watch` mode with the `hmr` option set to true (it's the default), each change to a file matching your rules will trigger a browser reload. ✨
