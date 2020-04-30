@@ -23,6 +23,6 @@
     "parcel-bundler": "^1.12.4"
   },
   "peerDependencies": {
-    "parcel-bundler": "^1.9.7"
+    "parcel-bundler": "^1.12.4"
   }
 }
