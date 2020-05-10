@@ -1,9 +1,6 @@
-const assert = require('assert');
 const path = require('path');
 const fs = require('fs-extra');
 const WatchReload = require('../lib/watch-reload');
-
-const Bundler = require('parcel-bundler');
 
 describe('Basic', function() {
   it('Should trigger a browser reload on file change', function(done) {
