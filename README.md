@@ -5,7 +5,7 @@
 # parcel-plugin-watch-reload 
 
 
-📦🔌🗂👀 A [Parcel](https://github.com/parcel-bundler/parcel) plugin that watches files not included in your bundles (e.g. `**/*.php`) and reloads your browser if they change. Also, has emojis in readme 👾
+📦🔌🗂👀 A [Parcel](https://github.com/parcel-bundler/parcel) plugin that watches files not included in your bundles (e.g. `**/*.php`) and reloads your browser if they change (great for CMS theme development like e.g. WordPress). Also, has emojis in readme 👾
 
 
 ## Installation
