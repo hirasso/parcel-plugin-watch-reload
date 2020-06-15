@@ -28,7 +28,7 @@ describe('#WatchReload()', function() {
   it(`Should trigger a browser reload after a delay of ${reloadDelay}ms`, function() {
     createWatchReloadWithSettings({
       files: '**/*.php',
-      reloadDelay: reloadDelay,
+      reloadDelay: reloadDelay
     }).then(watchReload => {
       let timeAtFileChange;
       watchReload.on('fileChange', () => { timeAtFileChange = Date.now() });
@@ -38,15 +38,6 @@ describe('#WatchReload()', function() {
       createTesterFile();
     })
   });
-
-  it('Should parse correct settings from package.json', function() {
-    const compareSettings = {
-      "files": "**/*.php",
-      "reloadDelay": 0
-    }
-    const watchReload = new WatchReload()
-    assert.deepEqual(watchReload.settings, compareSettings, 'Settings are equal');
-  })
 
 });
 
