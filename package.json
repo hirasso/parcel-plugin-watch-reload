@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-watch-reload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/hirasso/parcel-plugin-watch-reload.git",
@@ -9,7 +9,7 @@
   },
   "watchreload": {
     "files": "**/*.php",
-    "reloadDelay": 500
+    "reloadDelay": 0
   },
   "dependencies": {
     "chalk": "^4.0.0",
