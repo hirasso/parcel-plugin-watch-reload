@@ -53,7 +53,7 @@ Without the `files` setting in your `package.json`, the plugin will do nothing.
     }
   }
   ```
-- Overwrite the plugins settings for [Chokidar](https://github.com/paulmillr/chokidar#api) (the watcher):
+- Overwrite the plugin's settings for [Chokidar](https://github.com/paulmillr/chokidar#api). The defaults are:
 
   ```json
   {
